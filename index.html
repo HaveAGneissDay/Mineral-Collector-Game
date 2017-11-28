@@ -2,17 +2,33 @@
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" src="assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" src="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> -->
 	</head>
 </head>
 <body>
-  <h1> Star Wars RPG Game </h1>
-  <div class="avalibleCharacters"> </div>
-  <h2>Your Character</h2>
-  <div class="yourCharacter"> </div>
-  <h2> Enemies Avalible to Attack </h2>
-  <h2> Fight Section </h2>
-  <div class="button" id="attack"> Attack </div>
-  <h2> Defender </h2>
+  <h1> Mineral Collector </h1>
+  <article>
+  <p>You will be given a random number at the start of the game. </p>
+  <p>There are four minerals below. By clicking on a mineral you will add a specific amount of points to your total score.</p>
+  <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+  <p>The value of each mineral is hidden from you until you click on it.<p>
+    <p> Each time the game will change the values of each mineral </p>
+</article>
+  <div id="targetmineral"> Garnet <img src="assets/images/Garnet.jpg" height="100" width="100" </div>
+  <div class="scoreboard">
+  <div id="scoreboard-wins"> Wins: </div>
+  <div id="scoreboard-losses"> Losses: </div>
+</div>
+  <div class="button" id="mineral1"> Quartz <img src="assets/images/Quartz.jpg" height="100" width="100" > </div>
+  <div class="button" id="mineral2"> Pyrite <img src="assets/images/Pyrite.jpg" height="100" width="100" > </div>
+  <div class="button" id="mineral3"> Fluorite <img src="assets/images/Flourite.jpg" height="100" width="100" > </div>
+  <div class="button" id="mineral4"> Azurite <img src="assets/images/Azurite.jpg" height="100" width="100" > </div>
+  <div id="targetScore">Target Score: </div>
+  <div id="yourScore"> Your Score: </div>
+
+
+
+
 <script type="text/javascript" src="assets/javascript/game.js"> </script>
 </body>

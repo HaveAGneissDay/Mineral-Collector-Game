@@ -1,0 +1,18 @@
+h1 {
+  color: red,
+  padding 20px
+}
+
+article {
+  padding: 20px
+}
+
+button {
+  float: right,
+  border: 10px,
+  background-color: green
+}
+
+.scoreboard {
+  float: right
+}
