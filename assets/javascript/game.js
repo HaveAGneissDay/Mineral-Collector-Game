@@ -3,7 +3,7 @@ $(document).ready(function() {
   //Global Variables
   var wins = 0;
   var losses = 0;
-  var targetScore = 0;
+  var targetRandomNumber = 0;
   var yourScore = 0;
   var result = 0;
 
@@ -34,26 +34,29 @@ $(document).ready(function() {
 
     //How to connect the Mineral value to the button
     for (var i = 0; i < hiddenMineralValueHolder.length; i++) {
-
+      var button =$(".button")
+      button.attr("mineral-data", hiddenMineralValueHolder[i]);
+      //have to make it append each button 
+      $(".button").append(button);
       // ($"#button").attr("data-mineralvalue", hiddenMineralValueHolder[i]);
-      $(".mineral1").append(hiddenMineralValueHolder[0]);
-      $(".mineral2").append(hiddenMineralValueHolder[1]);
-      $(".mineral3").append(hiddenMineralValueHolder[2]);
-      $(".mineral4").append(hiddenMineralValueHolder[3]);
-    }
+      // $(".mineral1").attr("mineral-data", hiddenMineralValueHolder[0]);
+      // $(".mineral2").attr("mineral-data", hiddenMineralValueHolder[1]);
+      // $(".mineral3").attr("mineral-data", hiddenMineralValueHolder[2]);
+      // $(".mineral4").attr("mineral-data", hiddenMineralValueHolder[3]);
+  }
 
 
     //function to let you know if you win or not
-    $("#button").on("click", function() {
-      // var mineralValue = ($(this).attr("data-mineralvalue"));
-      // hiddenMineralValue = parseInt(hiddenMineralValue);
+    $(".button").on("click", function() {
+      var hiddenMineralValue = ($(this).attr("mineral-data"));
+      hiddenMineralValue = parseInt(hiddenMineralValue);
       yourScore += hiddenMineralValue //hiddenMineralvalue
       console.log(yourScore);
-      $(".yourScore").text("Your Score: " + yourScore);
+      $("#yourScore").text("Your Score: " + yourScore);
 
-      if (yourScore === targetScore) {
+      if (yourScore === targetRandomNumber) {
         alert("You win!");
-      } else if (yourScore >= targetScore) {
+      } else if (yourScore >= targetRandomNumber) {
         alert("You lose!!");
       }
     })
