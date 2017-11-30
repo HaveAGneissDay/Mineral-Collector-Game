@@ -36,8 +36,8 @@ $(document).ready(function() {
     for (var i = 0; i < hiddenMineralValueHolder.length; i++) {
       var button =$(".button")
       button.attr("mineral-data", hiddenMineralValueHolder[i]);
-      //have to make it append each button 
-      $(".button").append(button);
+      //have to make it append each button
+      $("#button").append(button);
       // ($"#button").attr("data-mineralvalue", hiddenMineralValueHolder[i]);
       // $(".mineral1").attr("mineral-data", hiddenMineralValueHolder[0]);
       // $(".mineral2").attr("mineral-data", hiddenMineralValueHolder[1]);
@@ -56,11 +56,15 @@ $(document).ready(function() {
 
       if (yourScore === targetRandomNumber) {
         alert("You win!");
+        wins += 1;
+        $("#scoreboard-wins").text("Wins: " + wins);
       } else if (yourScore >= targetRandomNumber) {
         alert("You lose!!");
+        losses += 1;
+        $("#scoreboard-losses").text("Loses: " + losses);
       }
     })
   }
 
-  startGame();
+   startGame();
 });
