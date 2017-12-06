@@ -7,7 +7,7 @@ article {
   padding: 20px
 }
 
-button {
+.button {
   float: right,
   border: 10px,
   background-color: green
